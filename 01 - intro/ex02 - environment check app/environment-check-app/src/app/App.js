@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const checks = [
-  'Terminal commands run successfully',
+  'Terminal commands run sas',
   'Expo server starts',
   'App opens on chosen device path',
   'Verification screen is visible',
