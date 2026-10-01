@@ -21,7 +21,18 @@ export default function DetailsScreen() {
   return (
     <View style={styles.safeArea}>
       <View style={styles.container}>
-        <Text style={styles.eyebrow}>Interactive detail route</Text>
+        <TextInput
+          placeholder="Tell me what you had for breakfast"
+          style={{ borderWidth: 1, padding: 12 }}
+          onChangeText={(text) => { noteVar = text; }}
+        />
+
+        <Pressable onPress={() => console.log('pressed!')}>
+          <Text>Preview Response</Text>
+        </Pressable>
+
+        <Text>{noteVar}</Text>
+        {/* <Text style={styles.eyebrow}>Interactive detail route</Text>
         <Text style={styles.title}>Input Handling Screen</Text>
         <Text style={styles.body}>
           This screen captures a short note and shows visible feedback after the user presses the action button.
@@ -48,7 +59,7 @@ export default function DetailsScreen() {
 
         <Pressable style={styles.secondaryButton} onPress={() => router.back()}>
           <Text style={styles.secondaryButtonLabel}>Go back</Text>
-        </Pressable>
+        </Pressable> */}
       </View>
     </View>
   );
